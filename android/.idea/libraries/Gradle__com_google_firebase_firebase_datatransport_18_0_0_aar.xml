@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-datatransport:18.0.0@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/transforms-2/files-2.1/9559ad504ec2484a8f4140349c03fa55/jetified-firebase-datatransport-18.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/transforms-3/922f96ca8c789c2ada2b9007211ed558/transformed/jetified-firebase-datatransport-18.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/transforms-3/922f96ca8c789c2ada2b9007211ed558/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/transforms-3/922f96ca8c789c2ada2b9007211ed558/transformed/jetified-firebase-datatransport-18.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-datatransport/18.0.0/ad06142fd89bf95ed6efba656ca1664685a894a8/firebase-datatransport-18.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-datatransport/18.0.0/7cb13c2847db2f645bedf1fe21976e15bea65b47/firebase-datatransport-18.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "904861334583",
+    "project_id": "ibook-cambodia",
+    "storage_bucket": "ibook-cambodia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904861334583:android:e0e27fa41ceb67868593b2",
+        "android_client_info": {
+          "package_name": "com.srhdp.ibookcambodia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904861334583-52019gk4nc7g7tm0icivnmjqkojc0d43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.srhdp.ibookcambodia",
+            "certificate_hash": "62de1b80e3d207f12d2d68cd159c8afd82303424"
+          }
+        },
+        {
+          "client_id": "904861334583-bi16g1g09aji896qj7ab6j0kdg8gktt8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEVXLbW1v5e5SU-COknPH-q8izfyQ2ycg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904861334583-bi16g1g09aji896qj7ab6j0kdg8gktt8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

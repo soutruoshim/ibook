@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-installations-interop:16.0.1@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/transforms-2/files-2.1/82d235a1b62fa4e6f3f006ad031eab10/jetified-firebase-installations-interop-16.0.1/res" />
+      <root url="file://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/transforms-3/7ba1909a9cb0715ed332e029e56fc348/transformed/jetified-firebase-installations-interop-16.0.1/res" />
+      <root url="jar://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/transforms-3/7ba1909a9cb0715ed332e029e56fc348/transformed/jetified-firebase-installations-interop-16.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/transforms-3/7ba1909a9cb0715ed332e029e56fc348/transformed/jetified-firebase-installations-interop-16.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../woobox_wcfm/android/gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations-interop/16.0.1/e0baec714e4cffbf7aed0e3daa5530c10c018eb2/firebase-installations-interop-16.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

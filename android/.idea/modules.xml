@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/880239585/android.connectivity_plus.iml" filepath="$PROJECT_DIR$/.idea/modules/880239585/android.connectivity_plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2136490104/android.facebook_audience_network.iml" filepath="$PROJECT_DIR$/.idea/modules/-2136490104/android.facebook_audience_network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-880332002/android.flutter_inappwebview.iml" filepath="$PROJECT_DIR$/.idea/modules/-880332002/android.flutter_inappwebview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1533358128/android.fluttertoast.iml" filepath="$PROJECT_DIR$/.idea/modules/-1533358128/android.fluttertoast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/8739221/android.google_mobile_ads.iml" filepath="$PROJECT_DIR$/.idea/modules/8739221/android.google_mobile_ads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2011444053/android.onesignal_flutter.iml" filepath="$PROJECT_DIR$/.idea/modules/-2011444053/android.onesignal_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-207800687/android.package_info_plus.iml" filepath="$PROJECT_DIR$/.idea/modules/-207800687/android.package_info_plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/925012730/android.path_provider_android.iml" filepath="$PROJECT_DIR$/.idea/modules/925012730/android.path_provider_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1485439179/android.share_plus.iml" filepath="$PROJECT_DIR$/.idea/modules/-1485439179/android.share_plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1215527924/android.shared_preferences_android.iml" filepath="$PROJECT_DIR$/.idea/modules/-1215527924/android.shared_preferences_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1804718452/android.sqflite.iml" filepath="$PROJECT_DIR$/.idea/modules/1804718452/android.sqflite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/52406577/android.store_redirect.iml" filepath="$PROJECT_DIR$/.idea/modules/52406577/android.store_redirect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1027728507/android.syncfusion_flutter_pdfviewer.iml" filepath="$PROJECT_DIR$/.idea/modules/1027728507/android.syncfusion_flutter_pdfviewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/711855674/android.url_launcher_android.iml" filepath="$PROJECT_DIR$/.idea/modules/711855674/android.url_launcher_android.iml" />
+    </modules>
+  </component>
+</project>

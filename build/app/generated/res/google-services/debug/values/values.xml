@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">904861334583-bi16g1g09aji896qj7ab6j0kdg8gktt8.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">904861334583</string>
+    <string name="google_api_key" translatable="false">AIzaSyDEVXLbW1v5e5SU-COknPH-q8izfyQ2ycg</string>
+    <string name="google_app_id" translatable="false">1:904861334583:android:e0e27fa41ceb67868593b2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDEVXLbW1v5e5SU-COknPH-q8izfyQ2ycg</string>
+    <string name="google_storage_bucket" translatable="false">ibook-cambodia.appspot.com</string>
+    <string name="project_id" translatable="false">ibook-cambodia</string>
+</resources>
