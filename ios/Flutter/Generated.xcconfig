@@ -1,8 +1,8 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=C:\src\flutter
-FLUTTER_APPLICATION_PATH=C:\Users\Srh DP\Documents\Android Flutter\ibook
+FLUTTER_ROOT=/Users/srhdp/flutter
+FLUTTER_APPLICATION_PATH=/Users/srhdp/Documents/flutter_project/ibook
 COCOAPODS_PARALLEL_CODE_SIGN=true
-FLUTTER_TARGET=lib\main.dart
+FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1

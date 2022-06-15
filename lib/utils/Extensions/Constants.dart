@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'Colors.dart';
 
 int defaultElevation = 4;
-double defaultRadius = 10.0;
+double defaultRadius = 8.0;
 double defaultBlurRadius = 4.0;
 double defaultSpreadRadius = 1.0;
 double defaultAppBarElevation = 4.0;

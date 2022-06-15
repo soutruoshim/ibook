@@ -49,11 +49,11 @@ class CategoryItemWidgetState extends State<CategoryItemWidget> {
             borderRadius: radius(defaultRadius),
             color: context.cardColor,
           ),
-          width: context.width() / 3 - 20,
+          width: context.width() / 2 - 20,
           child: Column(
             children: [
               widget.data.logo != null && widget.data.logo!.isNotEmpty
-                  ? cachedImage(widget.data.logo!.validate(), height: 150, width: 150, fit: BoxFit.fill).cornerRadiusWithClipRRectOnly(topLeft: defaultRadius.toInt(), topRight: defaultRadius.toInt())
+                  ? cachedImage(widget.data.logo!.validate(), height: 160, width: 160, fit: BoxFit.fill).cornerRadiusWithClipRRectOnly(topLeft: defaultRadius.toInt(), topRight: defaultRadius.toInt())
                   : Image.asset(ic_placeholder, height: 85, width: 85, fit: BoxFit.fill).paddingOnly(top: 25),
               8.height,
               Text(

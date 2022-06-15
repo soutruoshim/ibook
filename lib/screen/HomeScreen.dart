@@ -141,6 +141,9 @@ class HomeScreenState extends State<HomeScreen> {
           backgroundColor: primaryColor,
           elevation: 0,
           centerTitle: false,
+          // leading: Image(image:
+          //   AssetImage("asset/ic_logo.png"),height: 80.0, width: 80.0,
+          // ),
           title: Text(AppName, style: boldTextStyle(size: 20, color: Colors.white)),
           actions: [
             IconButton(

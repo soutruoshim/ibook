@@ -47,7 +47,7 @@ class SplashScreenState extends State<SplashScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(child: Image.asset(ic_logo, fit: BoxFit.fill, color: Colors.white, width: 100, height: 100)),
+          Container(child: Image.asset(ic_logo, fit: BoxFit.fill, width: 100, height: 100)),
           16.height,
           Text(AppName, style: boldTextStyle(size: 26, color: Colors.white)),
         ],
