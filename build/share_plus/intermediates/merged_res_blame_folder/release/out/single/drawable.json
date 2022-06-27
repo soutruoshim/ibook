@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable/notification_bg_low.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable/notification_bg.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable/notification_icon_background.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable/notification_icon_background.xml"
+    }
+]

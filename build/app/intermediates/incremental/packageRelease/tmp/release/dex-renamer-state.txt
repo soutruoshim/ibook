@@ -1,0 +1,4 @@
+#Mon Jun 27 22:19:08 ICT 2022
+base.0=/Users/srhdp/Documents/flutter_project/ibook/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

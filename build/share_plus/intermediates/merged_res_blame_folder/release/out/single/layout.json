@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/layout/custom_dialog.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/layout/notification_action_tombstone.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/layout/notification_template_part_time.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/layout/notification_template_icon_group.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/layout/notification_action.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_action.xml"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable-mdpi-v4/notification_bg_normal.9.png",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable-mdpi-v4/notification_bg_low_normal.9.png",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable-mdpi-v4/notification_bg_normal_pressed.9.png",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable-mdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/share_plus/intermediates/merged_res/release/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+    }
+]

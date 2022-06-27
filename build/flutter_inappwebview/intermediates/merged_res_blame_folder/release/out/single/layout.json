@@ -1,0 +1,178 @@
+[
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_action_menu_layout.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/chrome_custom_tabs_layout.xml",
+        "source": "/Users/srhdp/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.4.3+7/android/src/main/res/layout/chrome_custom_tabs_layout.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_screen_toolbar.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/browser_actions_context_menu_row.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/c1851dcd32eea3b95489c5b767be87fe/transformed/browser-1.4.0/res/layout/browser_actions_context_menu_row.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_tooltip.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_tooltip.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/notification_action_tombstone.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/browser_actions_context_menu_page.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/c1851dcd32eea3b95489c5b767be87fe/transformed/browser-1.4.0/res/layout/browser_actions_context_menu_page.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_search_view.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/activity_web_view.xml",
+        "source": "/Users/srhdp/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.4.3+7/android/src/main/res/layout/activity_web_view.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_screen_simple.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_alert_dialog_title_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/notification_action.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_screen_content_include.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/notification_template_part_time.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/notification_template_icon_group.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/custom_dialog.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/8a2e8e913047c4feb5e51b1286fa2b6a/transformed/core-1.7.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/floating_action_mode_item.xml",
+        "source": "/Users/srhdp/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.4.3+7/android/src/main/res/layout/floating_action_mode_item.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_action_mode_bar.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_select_dialog_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/select_dialog_item_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_cascading_menu_item_layout.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_cascading_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/floating_action_mode.xml",
+        "source": "/Users/srhdp/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.4.3+7/android/src/main/res/layout/floating_action_mode.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/srhdp/Documents/flutter_project/ibook/build/flutter_inappwebview/intermediates/merged_res/release/layout/abc_dialog_title_material.xml",
+        "source": "/Users/srhdp/.gradle/caches/transforms-3/f213dba277870916c82591100ba01a8c/transformed/appcompat-1.4.1/res/layout/abc_dialog_title_material.xml"
+    }
+]
