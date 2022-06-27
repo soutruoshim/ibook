@@ -57,6 +57,7 @@ Future<DashboardResponse> getDashboard() async {
       await setValue(INTERSTITIAL_AD_AUTHOR_LIST, res.adsconfiguration!.interstitialAdAuthorList.validate());
       await setValue(INTERSTITIAL_AD_AUTHOR_DETAIL, res.adsconfiguration!.interstitialAdAuthorDetail.validate());
     }
+    //print(res.adsconfiguration!.interstitialAdBookList.validate());
     return res;
   });
 }
@@ -67,6 +68,7 @@ Future<List<Book>> getBooks({
   Map? request,
 }) async {
   Iterable it = await (handleResponse(await buildHttpResponse('book.php', request: request, method: HttpMethod.POST)));
+  //print("${it}");
   return it.map((e) => Book.fromJson(e)).toList();
 }
 

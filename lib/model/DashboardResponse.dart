@@ -461,6 +461,7 @@ class Book {
   String? categoryName;
   String? authorName;
   String? authorImage;
+  String? price;
 
   Book(
       {this.id,
@@ -477,7 +478,9 @@ class Book {
         this.createdAt,
         this.categoryName,
         this.authorName,
-        this.authorImage});
+        this.authorImage,
+        this.price
+      });
 
   Book.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -495,6 +498,7 @@ class Book {
     categoryName = json['category_name'];
     authorName = json['author_name'];
     authorImage = json['author_image'];
+    price = json['price'];
   }
 
   Map<String, dynamic> toJson() {
@@ -514,6 +518,7 @@ class Book {
     data['category_name'] = this.categoryName;
     data['author_name'] = this.authorName;
     data['author_image'] = this.authorImage;
+    data['price'] = this.price;
     return data;
   }
 }

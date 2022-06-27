@@ -5,7 +5,7 @@ const AppName = "iBook-Cambodia";
 
 /// Note: /api/ is required after your domain. Ex if your domain is www.abc.com then ${mBaseUrl} will be  https://www.abc.com/api/
 //const mBaseUrl = 'https://meetmighty.com/mobile/mighty-ebook/api/';
-const mBaseUrl = 'https://ibook-cambodia.000webhostapp.com/api/';
+const mBaseUrl = 'http://ibook-cambodia.com/api/';
 
 // Facebook
 const FACEBOOK_KEY = '';

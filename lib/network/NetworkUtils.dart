@@ -50,7 +50,7 @@ Future<Response> buildHttpResponse(String endPoint, {HttpMethod method = HttpMet
       response = await get(url, headers: headers);
     }
 
-    log('Response ($method): ${response.statusCode} ${response.body}');
+    //log('Response ($method): ${response.statusCode} ${response.body}');
 
     return response;
   } else {

@@ -88,6 +88,7 @@ class HomeScreenState extends State<HomeScreen> {
       mErrorMsg = e.toString();
       setState(() {});
     });
+    print("${mPopularList}");
 
     if (isMobile) {
       OneSignal.shared.setNotificationOpenedHandler((OSNotificationOpenedResult notification) async {
@@ -135,6 +136,7 @@ class HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         appBar: AppBar(
           iconTheme: IconThemeData(size: 28),

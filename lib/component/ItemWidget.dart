@@ -132,6 +132,7 @@ class ItemWidgetState extends State<ItemWidget> {
 
   @override
   Widget build(BuildContext context) {
+    //print("book ${widget.data.price}");
     return mData();
   }
 }

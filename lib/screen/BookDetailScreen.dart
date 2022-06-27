@@ -134,21 +134,24 @@ class BookDetailScreenState extends State<BookDetailScreen> {
             Container(width: 2, height: 50, color: Colors.white),
             GestureDetector(
               onTap: () {
-                if (widget.data.type == "file") {
-                  if (widget.data.type.isEmptyOrNull) {
-                    toast(language.lblTryAgain);
-                  } else if (!widget.data.file!.contains(".pdf")) {
-                    WebViewScreen(mInitialUrl: widget.data.file!).launch(context);
+                print("price ${widget.data.price}");
+                if(widget.data.price.toInt() == 0){
+                  if (widget.data.type == "file") {
+                    if (widget.data.type.isEmptyOrNull) {
+                      toast(language.lblTryAgain);
+                    } else if (!widget.data.file!.contains(".pdf")) {
+                      WebViewScreen(mInitialUrl: widget.data.file!).launch(context);
+                    } else {
+                      PDFViewerComponent(url: widget.data.file!).launch(context);
+                    }
                   } else {
-                    PDFViewerComponent(url: widget.data.file!).launch(context);
-                  }
-                } else {
-                  if (widget.data.url.isEmptyOrNull) {
-                    toast(language.lblTryAgain);
-                  } else if (!widget.data.url!.contains(".pdf")) {
-                    WebViewScreen(mInitialUrl: widget.data.url!).launch(context);
-                  } else {
-                    PDFViewerComponent(url: widget.data.url!).launch(context);
+                    if (widget.data.url.isEmptyOrNull) {
+                      toast(language.lblTryAgain);
+                    } else if (!widget.data.url!.contains(".pdf")) {
+                      WebViewScreen(mInitialUrl: widget.data.url!).launch(context);
+                    } else {
+                      PDFViewerComponent(url: widget.data.url!).launch(context);
+                    }
                   }
                 }
               },
