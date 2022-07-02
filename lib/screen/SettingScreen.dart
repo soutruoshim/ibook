@@ -3,6 +3,7 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:ibook/screen/AuthorListScreen.dart';
 import 'package:ibook/screen/ChooseTopicScreen.dart';
 import 'package:ibook/screen/SelectThemeScreen.dart';
+import 'package:ibook/screen/login.dart';
 import 'package:ibook/utils/Extensions/Widget_extensions.dart';
 import 'package:ibook/utils/Extensions/int_extensions.dart';
 import 'package:ibook/utils/Extensions/string_extensions.dart';
@@ -78,6 +79,15 @@ class SettingScreenState extends State<SettingScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SettingItemWidget(
+              title: language.lblLogin,
+              trailing: mTailingIcon(),
+              subTitle: language.lblLogin,
+              leading: mLeadingWidget(Feather.user),
+              onTap: () async {
+                Login().launch(context);
+              },
+            ),
             SettingItemWidget(
               title: language.lblAuthors,
               trailing: mTailingIcon(),

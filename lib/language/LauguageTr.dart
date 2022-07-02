@@ -152,6 +152,8 @@ class LanguageTr extends BaseLanguage {
 
   @override
   String get lblLanguageDesc => "Dilinizi seçin";
+  @override
+  String get lblLogin => "Login";
 
 }
 

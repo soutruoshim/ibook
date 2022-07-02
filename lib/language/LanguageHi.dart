@@ -152,4 +152,6 @@ class LanguageHi extends BaseLanguage {
 
   @override
   String get lblLanguageDesc => "अपनी भाषा चुनिए";
+  @override
+  String get lblLogin => "Login";
 }

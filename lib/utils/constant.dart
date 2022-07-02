@@ -7,6 +7,9 @@ const AppName = "iBook-Cambodia";
 //const mBaseUrl = 'https://meetmighty.com/mobile/mighty-ebook/api/';
 const mBaseUrl = 'http://ibook-cambodia.com/api/';
 
+const String login_url = mBaseUrl + '/login.php';
+const String register_url = mBaseUrl + '/create_user.php';
+
 // Facebook
 const FACEBOOK_KEY = '';
 const fbBannerId = "IMG_16_9_APP_INSTALL#2312433698835503_2964944860251047";

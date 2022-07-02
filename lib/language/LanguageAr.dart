@@ -152,4 +152,7 @@ class LanguageAr extends BaseLanguage {
 
   @override
   String get lblLanguageDesc => "اختر لغتك";
+
+  @override
+  String get lblLogin => "تسجيل الدخول";
 }

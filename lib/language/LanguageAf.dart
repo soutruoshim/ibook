@@ -153,4 +153,7 @@ class LanguageAf extends BaseLanguage {
 
   @override
   String get lblLanguageDesc => "Kies u taal";
+
+  @override
+  String get lblLogin => "Login";
 }

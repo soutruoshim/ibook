@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:ibook/providers/auth_provider.dart';
+import 'package:ibook/providers/user_provider.dart';
 import 'package:ibook/store/AppStore.dart';
 import 'package:ibook/store/WishListStore/WishListStore.dart';
 import 'package:ibook/utils/Extensions/Commons.dart';
@@ -18,6 +20,7 @@ import 'package:ibook/utils/colors.dart';
 import 'package:ibook/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'AppTheme.dart';
 import 'language/AppLocalizations.dart';
@@ -79,7 +82,12 @@ Future<void> main() async {
   await initialize(aLocaleLanguageList: languageList());
   appStore.setLanguage(DEFAULT_LANGUAGE);
 
-  runApp(const MyApp());
+  //runApp(const MyApp());
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_)=> AuthProvider()),
+        ChangeNotifierProvider(create: (_)=>UserProvider())
+      ], child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {

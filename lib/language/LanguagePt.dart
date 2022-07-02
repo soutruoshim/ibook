@@ -152,4 +152,6 @@ class LanguagePt extends BaseLanguage {
 
   @override
   String get lblLanguageDesc => "Escolha o seu idioma";
+  @override
+  String get lblLogin => "Login";
 }

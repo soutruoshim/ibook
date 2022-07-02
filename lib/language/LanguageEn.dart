@@ -152,4 +152,7 @@ class LanguageEn extends BaseLanguage {
 
   @override
   String get lblLanguageDesc => "Choose your language";
+
+  @override
+  String get lblLogin => "Login";
 }

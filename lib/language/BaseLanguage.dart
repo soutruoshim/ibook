@@ -39,6 +39,7 @@ abstract class BaseLanguage {
   String get lblOthers;
   String get lblBy;
   String get lblAuthors;
+  String get lblLogin;
   String get lblAuthorsDes;
 
   String get lblAbout;
