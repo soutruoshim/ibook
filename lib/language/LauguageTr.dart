@@ -1,4 +1,5 @@
 import 'BaseLanguage.dart';
+
 class LanguageTr extends BaseLanguage {
   @override
   String get lblCategory => "Kategoriler";
@@ -58,7 +59,8 @@ class LanguageTr extends BaseLanguage {
   String get lblSeeMore => "Daha fazla gör";
 
   @override
-  String get lblRemoveBookmark => "Bookmark'ı kaldırmak istediğinizden emin misiniz?";
+  String get lblRemoveBookmark =>
+      "Bookmark'ı kaldırmak istediğinizden emin misiniz?";
 
   @override
   String get lblTryAgain => "Lütfen tekrar deneyin";
@@ -97,7 +99,8 @@ class LanguageTr extends BaseLanguage {
   String get lblChooseTheme => "Uygulama Temanızı Seçin";
 
   @override
-  String get lblDisableNotification => "Push bildirimlerini etkinleştir/devre dışı bırak";
+  String get lblDisableNotification =>
+      "Push bildirimlerini etkinleştir/devre dışı bırak";
 
   @override
   String get lblOthers => "Diğerleri";
@@ -127,19 +130,22 @@ class LanguageTr extends BaseLanguage {
   String get lblWalk1 => "Mighty Ebook'a hoş geldiniz";
 
   @override
-  String get lblWalk1Desc => "Lorem Ipsum, baskı ve dizgi endüstrisinin kukla metnidir.";
+  String get lblWalk1Desc =>
+      "Lorem Ipsum, baskı ve dizgi endüstrisinin kukla metnidir.";
 
   @override
   String get lblWalk2 => "PDF dosyasını okuyun";
 
   @override
-  String get lblWalk2Desc => "Lorem Ipsum, baskı ve dizgi endüstrisinin kukla metnidir.";
+  String get lblWalk2Desc =>
+      "Lorem Ipsum, baskı ve dizgi endüstrisinin kukla metnidir.";
 
   @override
   String get lblWalk3 => "Kitabınıza yer işareti koyun";
 
   @override
-  String get lblWalk3Desc => "Lorem Ipsum, baskı ve dizgi endüstrisinin kukla metnidir.";
+  String get lblWalk3Desc =>
+      "Lorem Ipsum, baskı ve dizgi endüstrisinin kukla metnidir.";
 
   @override
   String get lblGetStarted => "Başlamak";
@@ -154,6 +160,6 @@ class LanguageTr extends BaseLanguage {
   String get lblLanguageDesc => "Dilinizi seçin";
   @override
   String get lblLogin => "Login";
-
+  @override
+  String get lblLoginDes => "User Login/Sign Up";
 }
-

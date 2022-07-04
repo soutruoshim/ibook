@@ -1,4 +1,5 @@
 import 'BaseLanguage.dart';
+
 class LanguageEn extends BaseLanguage {
   @override
   String get lblCategory => "Categories";
@@ -127,19 +128,22 @@ class LanguageEn extends BaseLanguage {
   String get lblWalk1 => "Welcome to iBook-Cambodia";
 
   @override
-  String get lblWalk1Desc => "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+  String get lblWalk1Desc =>
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
 
   @override
   String get lblWalk2 => "Read PDF File";
 
   @override
-  String get lblWalk2Desc => "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+  String get lblWalk2Desc =>
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
 
   @override
   String get lblWalk3 => "Bookmark your book";
 
   @override
-  String get lblWalk3Desc => "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+  String get lblWalk3Desc =>
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
 
   @override
   String get lblGetStarted => "Get Started";
@@ -155,4 +159,7 @@ class LanguageEn extends BaseLanguage {
 
   @override
   String get lblLogin => "Login";
+
+ @override
+  String get lblLoginDes => "User Login/Sign Up";
 }

@@ -154,5 +154,7 @@ class LanguageVi extends BaseLanguage {
   String get lblLanguageDesc => "Chọn ngôn ngữ của bạn";
   @override
   String get lblLogin => "Login";
+   @override
+  String get lblLoginDes => "User Login/Sign Up";
 }
 

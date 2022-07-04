@@ -40,6 +40,8 @@ abstract class BaseLanguage {
   String get lblBy;
   String get lblAuthors;
   String get lblLogin;
+  String get lblLoginDes;
+
   String get lblAuthorsDes;
 
   String get lblAbout;

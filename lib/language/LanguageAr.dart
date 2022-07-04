@@ -1,4 +1,5 @@
 import 'BaseLanguage.dart';
+
 class LanguageAr extends BaseLanguage {
   @override
   String get lblCategory => "فئات";
@@ -127,19 +128,22 @@ class LanguageAr extends BaseLanguage {
   String get lblWalk1 => "مرحبًا بك في الكتاب الاليكتروني العظيم";
 
   @override
-  String get lblWalk1Desc => "Lorem ipsum هو ببساطة نص وهمية لصناعة الطباعة والأنشاش.";
+  String get lblWalk1Desc =>
+      "Lorem ipsum هو ببساطة نص وهمية لصناعة الطباعة والأنشاش.";
 
   @override
   String get lblWalk2 => "قراءة ملف PDF";
 
   @override
-  String get lblWalk2Desc => "Lorem ipsum هو ببساطة نص وهمية لصناعة الطباعة والأنشاش.";
+  String get lblWalk2Desc =>
+      "Lorem ipsum هو ببساطة نص وهمية لصناعة الطباعة والأنشاش.";
 
   @override
   String get lblWalk3 => "ضع إشارة مرجعية على كتابك";
 
   @override
-  String get lblWalk3Desc => "Lorem ipsum هو ببساطة نص وهمية لصناعة الطباعة والأنشاش.";
+  String get lblWalk3Desc =>
+      "Lorem ipsum هو ببساطة نص وهمية لصناعة الطباعة والأنشاش.";
 
   @override
   String get lblGetStarted => "البدء";
@@ -155,4 +159,6 @@ class LanguageAr extends BaseLanguage {
 
   @override
   String get lblLogin => "تسجيل الدخول";
+  @override
+  String get lblLoginDes => "تسجيل دخول المستخدم / التسجيل";
 }

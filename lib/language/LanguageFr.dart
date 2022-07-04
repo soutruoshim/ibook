@@ -154,5 +154,7 @@ class LanguageFr extends BaseLanguage {
   String get lblLanguageDesc => "Choisissez votre langue";
   @override
   String get lblLogin => "Login";
+   @override
+  String get lblLoginDes => "User Login/Sign Up";
 }
 
