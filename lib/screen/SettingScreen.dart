@@ -74,7 +74,8 @@ class SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarWidget(language.lblSetting, color: primaryColor, textColor: Colors.white, showBack: false),
+      appBar: appBarWidget(language.lblSetting,
+          color: primaryColor, textColor: Colors.white, showBack: false),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,7 +83,7 @@ class SettingScreenState extends State<SettingScreen> {
             SettingItemWidget(
               title: language.lblLogin,
               trailing: mTailingIcon(),
-              subTitle: language.lblLogin,
+              subTitle: language.lblLoginDes,
               leading: mLeadingWidget(Feather.user),
               onTap: () async {
                 Login().launch(context);
@@ -102,7 +103,8 @@ class SettingScreenState extends State<SettingScreen> {
               title: language.lblChooseTopic,
               trailing: mTailingIcon(),
               subTitle: language.lblChooseTopicTitle,
-              leading: mLeadingWidget(MaterialCommunityIcons.checkbox_marked_outline),
+              leading: mLeadingWidget(
+                  MaterialCommunityIcons.checkbox_marked_outline),
               onTap: () async {
                 ChooseTopicScreen().launch(context);
               },
@@ -112,7 +114,8 @@ class SettingScreenState extends State<SettingScreen> {
               title: language.lblSelectTheme,
               subTitle: language.lblChooseTheme,
               onTap: () async {
-                bool res = await SelectThemeScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Slide);
+                bool res = await SelectThemeScreen().launch(context,
+                    pageRouteAnimation: PageRouteAnimation.Slide);
                 if (res == true) setState(() {});
                 widget.onTap.call();
               },
@@ -155,7 +158,8 @@ class SettingScreenState extends State<SettingScreen> {
               children: [
                 Container(color: primaryColor, width: 4, height: 16),
                 6.width,
-                Text(language.lblOthers, style: boldTextStyle(color: primaryColor, size: 14)),
+                Text(language.lblOthers,
+                    style: boldTextStyle(color: primaryColor, size: 14)),
               ],
             ).paddingOnly(left: 16, right: 16, bottom: 4),
             SettingItemWidget(
@@ -174,7 +178,9 @@ class SettingScreenState extends State<SettingScreen> {
               trailing: mTailingIcon(),
               onTap: () {
                 if (getStringAsync(PRIVACY_POLICY_PREF).isNotEmpty)
-                  WebViewScreen(mInitialUrl: getStringAsync(PRIVACY_POLICY_PREF)).launch(context);
+                  WebViewScreen(
+                          mInitialUrl: getStringAsync(PRIVACY_POLICY_PREF))
+                      .launch(context);
                 else
                   toast(language.lblUrlEmpty);
               },
@@ -184,7 +190,9 @@ class SettingScreenState extends State<SettingScreen> {
               trailing: mTailingIcon(),
               onTap: () async {
                 if (getStringAsync(TERMS_AND_CONDITION_PREF).isNotEmpty)
-                  WebViewScreen(mInitialUrl: getStringAsync(TERMS_AND_CONDITION_PREF)).launch(context);
+                  WebViewScreen(
+                          mInitialUrl: getStringAsync(TERMS_AND_CONDITION_PREF))
+                      .launch(context);
                 else
                   toast(language.lblUrlEmpty);
               },
@@ -193,7 +201,8 @@ class SettingScreenState extends State<SettingScreen> {
               title: language.lblAboutUs,
               trailing: mTailingIcon(),
               onTap: () {
-                AboutUsScreen().launch(context, pageRouteAnimation: PageRouteAnimation.SlideBottomTop);
+                AboutUsScreen().launch(context,
+                    pageRouteAnimation: PageRouteAnimation.SlideBottomTop);
               },
             ),
           ],
