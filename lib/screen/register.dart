@@ -63,7 +63,7 @@ class _RegisterState extends State<Register> {
         // now check confirm password
         if(_password.endsWith(_confirmPassword)){
 
-          auth.register(_username, _password).then((response) {
+          auth.register(_firstname, _lastname, _username, _password).then((response) {
           //   if(response['status']){
           //     User user = response['data'];
           //     Provider.of<UserProvider>(context,listen: false).setUser(user);
@@ -79,6 +79,9 @@ class _RegisterState extends State<Register> {
           // });
             if(response!=null){
                  print("user_registered $response");
+                 //User user = response['data'];
+                 //Provider.of<UserProvider>(context,listen: false).setUser(user);
+                 //Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Login()));
             }
           });
 

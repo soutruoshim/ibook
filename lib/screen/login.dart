@@ -4,6 +4,7 @@ import 'package:flutter_flushbar/flutter_flushbar.dart';
 import 'package:ibook/model/user.dart';
 import 'package:ibook/providers/auth_provider.dart';
 import 'package:ibook/providers/user_provider.dart';
+import 'package:ibook/screen/SettingScreen.dart';
 import 'package:ibook/screen/register.dart';
 import 'package:ibook/utils/Extensions/Widget_extensions.dart';
 import 'package:ibook/utils/validator.dart';
@@ -38,14 +39,16 @@ class _LoginState extends State<Login> {
         final Future<Map<String,dynamic>> respose =  auth.login(_userName,_password);
 
         respose.then((response) {
+          print("respone $response");
           if (response['status']) {
 
             User user = response['user'];
+            print("user response ${user.email}");
 
             Provider.of<UserProvider>(context, listen: false).setUser(user);
 
-            Navigator.pushReplacementNamed(context, '/dashboard');
-
+            //Navigator.pushReplacementNamed(context, '/dashboard');
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => SettingScreen(onTap: (){})));
           } else {
             Flushbar(
               flushbarPosition: FlushbarPosition.TOP,

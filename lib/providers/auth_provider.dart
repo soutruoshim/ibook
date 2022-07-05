@@ -33,8 +33,10 @@ class AuthProvider extends ChangeNotifier {
     _registeredInStatus = value;
   }
 
-  Future<FutureOr> register(String email, String password) async {
+  Future<FutureOr> register(String firstname, String lastname, String email, String password) async {
     final Map<String, dynamic> apiBodyData = {
+      'firstname': firstname,
+      'lastname': lastname,
       'email': email,
       'password': password
     };
@@ -46,7 +48,6 @@ class AuthProvider extends ChangeNotifier {
     ).then(onValue)
         .catchError(onError);
   }
-
 
   notify(){
     notifyListeners();
@@ -90,8 +91,8 @@ class AuthProvider extends ChangeNotifier {
     var result;
 
     final Map<String, dynamic> loginData = {
-      'UserName': 'kaliakoirdeo379',
-      'Password': 'kaliakoirdeo379@2020'
+      'email': email,
+      'password': password
     };
 
     _loggedInStatus = Status.Authenticating;
@@ -113,7 +114,8 @@ class AuthProvider extends ChangeNotifier {
 
       print(responseData);
 
-      var userData = responseData['Content'];
+      var userData = responseData['user'];
+      print("userdata ${userData}");
 
       User authUser = User.fromJson(userData);
 
@@ -123,6 +125,7 @@ class AuthProvider extends ChangeNotifier {
       notifyListeners();
 
       result = {'status': true, 'message': 'Successful', 'user': authUser};
+      print('Resulet $result');
 
     } else {
       _loggedInStatus = Status.NotLoggedIn;
