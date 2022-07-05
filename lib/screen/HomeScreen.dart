@@ -3,7 +3,9 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ibook/component/ItemWidget.dart';
 import 'package:ibook/model/DashboardResponse.dart';
+import 'package:ibook/model/user.dart';
 import 'package:ibook/network/RestApis.dart';
+import 'package:ibook/providers/user_provider.dart';
 import 'package:ibook/screen/CategoryScreen.dart';
 import 'package:ibook/screen/ViewAllScreen.dart';
 import 'package:ibook/utils/Extensions/Colors.dart';
@@ -12,9 +14,11 @@ import 'package:ibook/utils/Extensions/context_extensions.dart';
 import 'package:ibook/utils/Extensions/decorations.dart';
 import 'package:ibook/utils/Extensions/int_extensions.dart';
 import 'package:ibook/utils/Extensions/string_extensions.dart';
+import 'package:ibook/utils/Extensions/user_shared_preference.dart';
 import 'package:ibook/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
+import 'package:provider/provider.dart';
 import '../component/AuthorComponent.dart';
 import '../component/CategoryItemWidget.dart';
 import '../component/HomeSliderComponent.dart';
@@ -101,6 +105,11 @@ class HomeScreenState extends State<HomeScreen> {
         }
       });
     }
+
+    //get user login
+    UserPreferences().getUser().then((value) => {
+        Provider.of<UserProvider>(context, listen: false).setUser(value)
+    });
   }
 
   @override

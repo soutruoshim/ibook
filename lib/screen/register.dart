@@ -54,8 +54,8 @@ class _RegisterState extends State<Register> {
           //Navigator.pushReplacementNamed(context, '/login');
 
           //Login().launch(context);
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Login()));
-
+          //Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Login()));
+          Navigator.pop(context);
           auth.loggedInStatus = Status.LoggedIn;
           auth.notify();
         });

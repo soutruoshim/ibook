@@ -115,11 +115,16 @@ class AuthProvider extends ChangeNotifier {
       print(responseData);
 
       var userData = responseData['user'];
-      print("userdata ${userData}");
+
+      print("userData ${userData}");
 
       User authUser = User.fromJson(userData);
 
+      print("user email ${authUser.email}");
+
       UserPreferences().saveUser(authUser);
+
+
 
       _loggedInStatus = Status.LoggedIn;
       notifyListeners();

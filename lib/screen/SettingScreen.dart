@@ -105,6 +105,8 @@ class SettingScreenState extends State<SettingScreen> {
                     textCancel: const Text('No'),
                   )) {
                     UserPreferences().removeUser();
+                    Provider.of<UserProvider>(context, listen: false).setUser(User());
+
                     Login().launch(context);
                     return print('pressedOK');
                   }

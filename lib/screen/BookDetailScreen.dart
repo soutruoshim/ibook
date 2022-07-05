@@ -134,8 +134,8 @@ class BookDetailScreenState extends State<BookDetailScreen> {
             Container(width: 2, height: 50, color: Colors.white),
             GestureDetector(
               onTap: () {
-                print("price ${widget.data.price}");
-                if(widget.data.price.toInt() == 0){
+                print("price ${widget.data.price.toDouble()}");
+                if(widget.data.price.toDouble() == 0){
                   if (widget.data.type == "file") {
                     if (widget.data.type.isEmptyOrNull) {
                       toast(language.lblTryAgain);
@@ -153,9 +153,11 @@ class BookDetailScreenState extends State<BookDetailScreen> {
                       PDFViewerComponent(url: widget.data.url!).launch(context);
                     }
                   }
+                }else{
+
                 }
               },
-              child: Text(language.lblReadBook, style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
+              child: Text(widget.data.price.toDouble() == 0?language.lblReadBook: "Buy \$ " + widget.data.price.toString(), style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
             ).expand()
           ],
         ),

@@ -48,7 +48,8 @@ class _LoginState extends State<Login> {
             Provider.of<UserProvider>(context, listen: false).setUser(user);
 
             //Navigator.pushReplacementNamed(context, '/dashboard');
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => SettingScreen(onTap: (){})));
+            //Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => SettingScreen(onTap: (){})));
+            Navigator.pop(context);
           } else {
             Flushbar(
               flushbarPosition: FlushbarPosition.TOP,

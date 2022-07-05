@@ -11,13 +11,14 @@ class User {
   // now create converter
 
   factory User.fromJson(Map<String,dynamic> responseData){
+    print(responseData);
     return User(
-      userId: responseData['id']??"",
-      firstname: responseData['firstname']??"",
-      lastname: responseData['lastname']??"",
-      email : responseData['Email']??"",
-      password: responseData['password']??"",
-      token: responseData["token"]??""
+      userId: responseData['id'],
+      firstname: responseData['firstname'],
+      lastname: responseData['lastname'],
+      email : responseData['email'],
+      password: responseData['password'],
+      token: responseData["token"],
     );
   }
 }
