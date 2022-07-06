@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_flushbar/flutter_flushbar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:http/http.dart';
 import 'package:ibook/component/AuthorComponent.dart';
 import 'package:ibook/model/user.dart';
@@ -77,7 +78,7 @@ class PaymentState extends State<Payment> {
                   });
                 }
               },
-              child: Text("Pay now", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
+              child: status=="" ?Text("Pay now", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center):loading,
             ).expand()
           ],
         ),
@@ -122,7 +123,7 @@ class PaymentState extends State<Payment> {
       'payment_status':'pending',
       'paid_document':paid_doc
     };
-    int count = 2;
+
     return await post(
         Uri.parse(order_url),
         body: json.encode(apiBodyData),
@@ -130,10 +131,29 @@ class PaymentState extends State<Payment> {
     ).then((value) => {
         //print(value)
         //Navigator.pop(context)
-        Navigator.of(context).popUntil((_) => count-- <= 0)
+       backToBookDetail()
     });
   }
+  backToBookDetail(){
+    // Flushbar(
+    //   title: 'Receipt',
+    //   message: 'Thank You for payment.',
+    //   duration: Duration(seconds: 10),
+    // ).show(context);
+    setState(() {
+      status = "success";
+    });
+    int count = 2;
+    Navigator.of(context).popUntil((_) => count-- <= 0);
+  }
 
+  final loading = Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      CircularProgressIndicator(),
+      Text(" Uploading ... Please wait")
+    ],
+  );
 
   imageFromCamera() async {
     PickedFile? pickedFile = await ImagePicker()
