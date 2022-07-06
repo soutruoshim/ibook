@@ -159,4 +159,7 @@ class LanguageHi extends BaseLanguage {
 
   @override
   String get lblIntroduction => "Introduction";
+
+  @override
+  String get lblPayment => "Payment";
 }

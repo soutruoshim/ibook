@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:ibook/component/AuthorComponent.dart';
@@ -33,6 +35,7 @@ class PaymentState extends State<Payment> {
       'http://localhost/flutter_test/upload_image.php';
   File? imageFile;
   String status = "";
+  String filePath = "";
 
 
   @override
@@ -40,7 +43,7 @@ class PaymentState extends State<Payment> {
     super.initState();
   }
 
-  final appBar = appBarWidget(language.lblIntroduction, color: primaryColor, textColor: Colors.white, showBack: true);
+  final appBar = appBarWidget(language.lblPayment, color: primaryColor, textColor: Colors.white, showBack: true);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +57,9 @@ class PaymentState extends State<Payment> {
           children: [
             GestureDetector(
               onTap: () {
-                //Payment().launch(context);
+                uploadImage(filePath, upload_url).then((value) => {
+                    print(value)
+                });
               },
               child: Text("Pay now", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
             ).expand()
@@ -69,9 +74,35 @@ class PaymentState extends State<Payment> {
     if (pickedFile != null) {
       setState(() {
         imageFile = File(pickedFile.path);
+        filePath = pickedFile.path;
       });
     }
   }
+  // uploadFile() async {
+  //   var postUri = Uri.parse("<APIUrl>");
+  //   var request = new http.MultipartRequest("POST", postUri);
+  //   request.fields['user'] = 'blah';
+  //   request.files.add(new http.MultipartFile.fromBytes('file', await File.fromUri("<path/to/file>").readAsBytes(), contentType: new MediaType('image', 'jpeg')))
+  //
+  //   request.send().then((response) {
+  //     if (response.statusCode == 200) print("Uploaded!");
+  //   });
+  // }
+
+  Future<FutureOr> uploadImage(filename, url) async {
+    var request = http.MultipartRequest('POST', Uri.parse(url));
+    request.files.add(await http.MultipartFile.fromPath('avatar', filename));
+
+    var res = await request.send();
+    request.send().then((response) {
+      if (response.statusCode == 200){
+           final Map<String, dynamic> responseData = json.decode(response.stream.toString());
+           return responseData;
+      }
+    });
+    return "fail";
+  }
+
 
   imageFromCamera() async {
     PickedFile? pickedFile = await ImagePicker()

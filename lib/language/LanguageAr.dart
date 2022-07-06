@@ -164,4 +164,7 @@ class LanguageAr extends BaseLanguage {
 
   @override
   String get lblIntroduction => "المقدمة";
+
+  @override
+  String get lblPayment => "دفع";
 }

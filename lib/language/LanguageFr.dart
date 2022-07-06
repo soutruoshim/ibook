@@ -158,5 +158,8 @@ class LanguageFr extends BaseLanguage {
   String get lblLoginDes => "User Login/Sign Up";
   @override
   String get lblIntroduction => "Introduction";
+
+  @override
+  String get lblPayment => "Payment";
 }
 
