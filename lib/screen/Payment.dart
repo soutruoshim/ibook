@@ -31,74 +31,15 @@ class Payment extends StatefulWidget {
 class PaymentState extends State<Payment> {
   static final String uploadEndPoint =
       'http://localhost/flutter_test/upload_image.php';
-  Future<File>? file;
-  String status = '';
-  String base64Image = "";
-  File? tmpFile;
-  String errMessage = 'Error Uploading Image';
+  File? imageFile;
+  String status = "";
 
-  chooseImage() {
-    setState(() {
-      file = ImagePicker().getImage(source: ImageSource.gallery);
-    });
-    setStatus('');
-  }
-
-  setStatus(String message) {
-    setState(() {
-      status = message;
-    });
-  }
-
-  startUpload() {
-    setStatus('Uploading Image...');
-    if (null == tmpFile) {
-      setStatus(errMessage);
-      return;
-    }
-    String fileName = tmpFile.path.split('/').last;
-    upload(fileName);
-  }
-
-  upload(String fileName) {
-    http.post(uploadEndPoint, body: {
-      "image": base64Image,
-      "name": fileName,
-    }).then((result) {
-      setStatus(result.statusCode == 200 ? result.body : errMessage);
-    }).catchError((error) {
-      setStatus(error);
-    });
-  }
 
   @override
   void initState() {
     super.initState();
-    init();
   }
 
-  init() async {
-    //
-    if (mAuthorListInterstitialAds == '1') loadInterstitialAds();
-  }
-
-  @override
-  void setState(fn) {
-    if (mounted) super.setState(fn);
-  }
-
-  @override
-  void dispose() {
-    if (mAuthorListInterstitialAds == '1') {
-      if (mAdShowAuthorListCount < int.parse(adsInterval)) {
-        mAdShowAuthorListCount++;
-      } else {
-        mAdShowAuthorListCount = 0;
-        showInterstitialAds();
-      }
-    }
-    super.dispose();
-  }
   final appBar = appBarWidget(language.lblIntroduction, color: primaryColor, textColor: Colors.white, showBack: true);
   @override
   Widget build(BuildContext context) {
@@ -113,7 +54,7 @@ class PaymentState extends State<Payment> {
           children: [
             GestureDetector(
               onTap: () {
-                Payment().launch(context);
+                //Payment().launch(context);
               },
               child: Text("Pay now", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
             ).expand()
@@ -122,33 +63,24 @@ class PaymentState extends State<Payment> {
       ).paddingAll(24),
     );
   }
-  Widget showImage() {
-    return FutureBuilder<File>(
-      future: _image,
-      builder: (BuildContext context, AsyncSnapshot<File> snapshot) {
-        if (snapshot.connectionState == ConnectionState.done &&
-            null != snapshot.data) {
-          tmpFile = snapshot.data;
-          base64Image = base64Encode(snapshot.data.readAsBytesSync());
-          return Flexible(
-            child: Image.file(
-              snapshot.data,
-              fit: BoxFit.fill,
-            ),
-          );
-        } else if (null != snapshot.error) {
-          return const Text(
-            'Error Picking Image',
-            textAlign: TextAlign.center,
-          );
-        } else {
-          return const Text(
-            'No Image Selected',
-            textAlign: TextAlign.center,
-          );
-        }
-      },
-    );
+  imageFromGallery() async {
+    PickedFile? pickedFile = await ImagePicker()
+        .getImage(source: ImageSource.gallery, maxHeight: 200, maxWidth: 200);
+    if (pickedFile != null) {
+      setState(() {
+        imageFile = File(pickedFile.path);
+      });
+    }
+  }
+
+  imageFromCamera() async {
+    PickedFile? pickedFile = await ImagePicker()
+        .getImage(source: ImageSource.camera, maxHeight: 200, maxWidth: 200);
+    if (pickedFile != null) {
+      setState(() {
+        imageFile = File(pickedFile.path);
+      });
+    }
   }
 
   _buildBody(context) {
@@ -158,19 +90,22 @@ class PaymentState extends State<Payment> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           OutlineButton(
-            onPressed:  _onImageButtonPressed(ImageSource.gallery, context: context),
-            child: Text('Choose Image'),
+            onPressed:  () {
+              imageFromGallery();
+            },
+            child: Text('Choose Receipt'),
           ),
           SizedBox(
             height: 20.0,
           ),
-          showImage(),
+          Flexible(
+            child: imageFile!=null? Image.file(
+              imageFile!,
+              fit: BoxFit.fill,
+            ):Container(color: Colors.white,)
+          ),
           SizedBox(
             height: 20.0,
-          ),
-          OutlineButton(
-            onPressed: startUpload,
-            child: Text('Upload Image'),
           ),
           SizedBox(
             height: 20.0,

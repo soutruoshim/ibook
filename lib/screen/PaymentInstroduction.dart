@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:ibook/component/AuthorComponent.dart';
 import 'package:ibook/screen/AuthorDetailScreen.dart';
+import 'package:ibook/screen/Payment.dart';
 import 'package:ibook/utils/Extensions/Constants.dart';
 import 'package:ibook/utils/Extensions/context_extensions.dart';
 import 'package:ibook/utils/Extensions/decorations.dart';
@@ -65,7 +66,7 @@ class PaymentInstructionState extends State<PaymentInstruction> {
           children: [
             GestureDetector(
               onTap: () {
-                PaymentInstruction().launch(context);
+                Payment().launch(context);
               },
               child: Text("Go Payment", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
             ).expand()
