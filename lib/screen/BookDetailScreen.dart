@@ -1,6 +1,7 @@
 import 'package:facebook_audience_network/facebook_audience_network.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:ibook/screen/PaymentInstroduction.dart';
 import 'package:ibook/utils/Extensions/Commons.dart';
 import 'package:ibook/utils/Extensions/Widget_extensions.dart';
 import 'package:ibook/utils/Extensions/context_extensions.dart';
@@ -154,7 +155,7 @@ class BookDetailScreenState extends State<BookDetailScreen> {
                     }
                   }
                 }else{
-
+                    PaymentInstruction().launch(context);
                 }
               },
               child: Text(widget.data.price.toDouble() == 0?language.lblReadBook: "Buy \$ " + widget.data.price.toString(), style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),

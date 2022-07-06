@@ -72,4 +72,6 @@ abstract class BaseLanguage {
 
   String get lblLanguageDesc;
 
+  String get lblIntroduction;
+
 }

@@ -161,4 +161,7 @@ class LanguageAr extends BaseLanguage {
   String get lblLogin => "تسجيل الدخول";
   @override
   String get lblLoginDes => "تسجيل دخول المستخدم / التسجيل";
+
+  @override
+  String get lblIntroduction => "المقدمة";
 }

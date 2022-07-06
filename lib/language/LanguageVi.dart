@@ -156,5 +156,8 @@ class LanguageVi extends BaseLanguage {
   String get lblLogin => "Login";
    @override
   String get lblLoginDes => "User Login/Sign Up";
+
+  @override
+  String get lblIntroduction => "Introduction";
 }
 

@@ -162,4 +162,7 @@ class LanguageEn extends BaseLanguage {
 
  @override
   String get lblLoginDes => "User Login/Sign Up";
+
+  @override
+  String get lblIntroduction => "Introduction";
 }
