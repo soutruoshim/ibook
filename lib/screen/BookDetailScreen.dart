@@ -155,7 +155,7 @@ class BookDetailScreenState extends State<BookDetailScreen> {
                     }
                   }
                 }else{
-                    PaymentInstruction().launch(context);
+                    PaymentInstruction(widget.data).launch(context);
                 }
               },
               child: Text(widget.data.price.toDouble() == 0?language.lblReadBook: "Buy \$ " + widget.data.price.toString(), style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),

@@ -1,13 +1,18 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_flushbar/flutter_flushbar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:http/http.dart';
 import 'package:ibook/component/AuthorComponent.dart';
+import 'package:ibook/model/user.dart';
+import 'package:ibook/providers/user_provider.dart';
 import 'package:ibook/screen/AuthorDetailScreen.dart';
 import 'package:ibook/utils/Extensions/Constants.dart';
 import 'package:ibook/utils/Extensions/context_extensions.dart';
 import 'package:ibook/utils/Extensions/decorations.dart';
 import 'package:ibook/utils/Extensions/text_styles.dart';
+import 'package:provider/provider.dart';
 import '../main.dart';
 import '../model/DashboardResponse.dart';
 import '../network/RestApis.dart';
@@ -22,21 +27,22 @@ import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 
 class Payment extends StatefulWidget {
-  Payment() : super();
-  static String tag = '/PaymentIntroduction';
-  final String title = "Upload Image Demo";
+  Book? book;
+  static String tag = '/Payment';
+
+  Payment(this.book);
 
   @override
   PaymentState createState() => PaymentState();
 }
 
 class PaymentState extends State<Payment> {
-  static final String uploadEndPoint =
-      'http://localhost/flutter_test/upload_image.php';
+
   File? imageFile;
   String status = "";
   String filePath = "";
-
+  User? user;
+  Book? book;
 
   @override
   void initState() {
@@ -46,6 +52,8 @@ class PaymentState extends State<Payment> {
   final appBar = appBarWidget(language.lblPayment, color: primaryColor, textColor: Colors.white, showBack: true);
   @override
   Widget build(BuildContext context) {
+    user = Provider.of<UserProvider>(context).user;
+    book = widget.book??null;
     return Scaffold(
       appBar: appBar,
       body: _buildBody(context),
@@ -57,9 +65,17 @@ class PaymentState extends State<Payment> {
           children: [
             GestureDetector(
               onTap: () {
-                uploadImage(filePath, upload_url).then((value) => {
+                if(filePath == ""){
+                  Flushbar(
+                    title: 'Receipt',
+                    message: 'Please choose receipt to upload',
+                    duration: Duration(seconds: 10),
+                  ).show(context);
+                }else{
+                  uploadImage(filePath, upload_url).then((value) => {
                     print(value)
-                });
+                  });
+                }
               },
               child: Text("Pay now", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
             ).expand()
@@ -78,29 +94,44 @@ class PaymentState extends State<Payment> {
       });
     }
   }
-  // uploadFile() async {
-  //   var postUri = Uri.parse("<APIUrl>");
-  //   var request = new http.MultipartRequest("POST", postUri);
-  //   request.fields['user'] = 'blah';
-  //   request.files.add(new http.MultipartFile.fromBytes('file', await File.fromUri("<path/to/file>").readAsBytes(), contentType: new MediaType('image', 'jpeg')))
-  //
-  //   request.send().then((response) {
-  //     if (response.statusCode == 200) print("Uploaded!");
-  //   });
-  // }
 
   Future<FutureOr> uploadImage(filename, url) async {
-    var request = http.MultipartRequest('POST', Uri.parse(url));
-    request.files.add(await http.MultipartFile.fromPath('avatar', filename));
+      var postUri = Uri.parse(url);
+      http.MultipartRequest request = new http.MultipartRequest("POST", postUri);
+      http.MultipartFile multipartFile = await http.MultipartFile.fromPath(
+          'avatar', filePath);
+      request.files.add(multipartFile);
+      http.StreamedResponse response = await request.send();
+      response.stream.transform(utf8.decoder).listen((value) {
+            Map<String, dynamic> object = json.decode(value);
+            print(object['url']);
 
-    var res = await request.send();
-    request.send().then((response) {
-      if (response.statusCode == 200){
-           final Map<String, dynamic> responseData = json.decode(response.stream.toString());
-           return responseData;
-      }
+
+            orderBook(user!.userId, book!.id, book!.price, book!.price, object['url']).then((value) => {
+
+            });
+      });
+  }
+
+  Future<FutureOr> orderBook(String user_id, String? book_id, String? price, String? amount, String paid_doc) async {
+    final Map<String, dynamic> apiBodyData = {
+      'user_id': user_id,
+      'book_id': book_id,
+      'price': price,
+      'amount': amount,
+      'payment_status':'pending',
+      'paid_document':paid_doc
+    };
+    int count = 2;
+    return await post(
+        Uri.parse(order_url),
+        body: json.encode(apiBodyData),
+        headers: <String, String>{'Content-Type':'application/json'}
+    ).then((value) => {
+        //print(value)
+        //Navigator.pop(context)
+        Navigator.of(context).popUntil((_) => count-- <= 0)
     });
-    return "fail";
   }
 
 

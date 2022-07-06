@@ -10,3 +10,4 @@ const ic_youtube="asset/ic_youtube.png";
 const ic_walk1="asset/ic_walk1.png";
 const ic_walk2="asset/ic_walk2.png";
 const ic_walk3="asset/ic_walk3.png";
+const introduction_img = "asset/introduction.png";

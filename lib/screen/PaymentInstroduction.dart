@@ -7,6 +7,7 @@ import 'package:ibook/utils/Extensions/Constants.dart';
 import 'package:ibook/utils/Extensions/context_extensions.dart';
 import 'package:ibook/utils/Extensions/decorations.dart';
 import 'package:ibook/utils/Extensions/text_styles.dart';
+import 'package:ibook/utils/images.dart';
 import '../main.dart';
 import '../model/DashboardResponse.dart';
 import '../network/RestApis.dart';
@@ -18,6 +19,8 @@ import '../utils/constant.dart';
 
 class PaymentInstruction extends StatefulWidget {
   static String tag = '/PaymentIntroduction';
+  Book? book;
+  PaymentInstruction(this.book);
 
   @override
   PaymentInstructionState createState() => PaymentInstructionState();
@@ -66,7 +69,7 @@ class PaymentInstructionState extends State<PaymentInstruction> {
           children: [
             GestureDetector(
               onTap: () {
-                Payment().launch(context);
+                Payment(widget.book).launch(context);
               },
               child: Text("Go Payment", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
             ).expand()
@@ -82,20 +85,17 @@ class PaymentInstructionState extends State<PaymentInstruction> {
         MediaQuery.of(context).padding.top;
 
     return SingleChildScrollView(
+      padding: EdgeInsets.fromLTRB(16.0, 0, 16.0, 0),
       child: ConstrainedBox(
         constraints: BoxConstraints(
           minHeight: minHeight,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            TextField(
-              maxLines: null,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-              ),
-            ),
+            SizedBox(height: 8),
+            Image.asset(introduction_img, fit: BoxFit.cover,),
             SizedBox(height: 8),
           ],
         ),
