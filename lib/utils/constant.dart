@@ -11,6 +11,7 @@ const String login_url = mBaseUrl + '/login.php';
 const String register_url = mBaseUrl + '/create_user.php';
 const String upload_url = mBaseUrl + '/upload.php';
 const String order_url = mBaseUrl + '/order.php';
+const String ordercheck_url = mBaseUrl + '/order_check.php';
 
 // Facebook
 const FACEBOOK_KEY = '';
