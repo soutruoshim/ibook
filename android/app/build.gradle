@@ -42,8 +42,8 @@ apply plugin: 'com.google.gms.google-services'
         applicationId "com.srhdp.ibookcambodia"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 3
-        versionName "1.1.0"
+        versionCode 4
+        versionName "1.1.1"
     }
 
     signingConfigs {
