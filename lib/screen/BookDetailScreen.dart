@@ -8,6 +8,7 @@ import 'package:http/http.dart';
 import 'package:ibook/model/user.dart';
 import 'package:ibook/providers/user_provider.dart';
 import 'package:ibook/screen/PaymentInstroduction.dart';
+import 'package:ibook/screen/login.dart';
 import 'package:ibook/utils/Extensions/Commons.dart';
 import 'package:ibook/utils/Extensions/Widget_extensions.dart';
 import 'package:ibook/utils/Extensions/context_extensions.dart';
@@ -146,28 +147,47 @@ class BookDetailScreenState extends State<BookDetailScreen> {
             GestureDetector(
               onTap: () {
 
-                if(widget.data.price.toDouble() == 0){
-                  if (widget.data.type == "file") {
-                    if (widget.data.type.isEmptyOrNull) {
-                      toast(language.lblTryAgain);
-                    } else if (!widget.data.file!.contains(".pdf")) {
-                      WebViewScreen(mInitialUrl: widget.data.file!).launch(context);
+                // if(widget.data.price.toDouble() == 0){
+                //
+                // }else{
+                //
+                // }
+
+                switch(gotoPay) {
+                  case "read": {
+                    if (widget.data.type == "file") {
+                      if (widget.data.type.isEmptyOrNull) {
+                        toast(language.lblTryAgain);
+                      } else if (!widget.data.file!.contains(".pdf")) {
+                        WebViewScreen(mInitialUrl: widget.data.file!).launch(context);
+                      } else {
+                        PDFViewerComponent(url: widget.data.file!).launch(context);
+                      }
                     } else {
-                      PDFViewerComponent(url: widget.data.file!).launch(context);
-                    }
-                  } else {
-                    if (widget.data.url.isEmptyOrNull) {
-                      toast(language.lblTryAgain);
-                    } else if (!widget.data.url!.contains(".pdf")) {
-                      WebViewScreen(mInitialUrl: widget.data.url!).launch(context);
-                    } else {
-                      PDFViewerComponent(url: widget.data.url!).launch(context);
+                      if (widget.data.url.isEmptyOrNull) {
+                        toast(language.lblTryAgain);
+                      } else if (!widget.data.url!.contains(".pdf")) {
+                        WebViewScreen(mInitialUrl: widget.data.url!).launch(context);
+                      } else {
+                        PDFViewerComponent(url: widget.data.url!).launch(context);
+                      }
                     }
                   }
-                }else{
-                    PaymentInstruction(widget.data).launch(context);
-                }
+                  break;
 
+                  case "login": {
+                    Login().launch(context);
+                  }
+                  break;
+                  case "process": {
+                    showAlertDialog(context);
+                  }
+                  break;
+                  case "gotopay": {
+                     PaymentInstruction(widget.data).launch(context);
+                  }
+                  break;
+                }
               },
               child: Text(lblReadBook, style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
             ).expand()
@@ -178,17 +198,19 @@ class BookDetailScreenState extends State<BookDetailScreen> {
   }
 
   String lblReadBook = "Read Book";
+  String gotoPay = "read";
+
   getLblReadBook() {
     if(widget.data.price.toDouble() > 0){
-         print(user!.userId);
+         // check user is active
          if(user!.userId !=""){
-           print("user null and book price");
            orderCheck(user!.userId, widget.data.id).then((value) => {
            });
          }else{
            //print("user null and book price");
            setState(() {
               lblReadBook = "Buy \$ " + widget.data.price.toString();
+              gotoPay = "login";
            });
          }
     }
@@ -213,21 +235,50 @@ class BookDetailScreenState extends State<BookDetailScreen> {
         if(responseData['order']['payment_status'] == 'pending'){
           setState(() {
             lblReadBook = "Process Confirm";
+            gotoPay = "process";
           });
         }else{
           setState(() {
             lblReadBook = "Read Book";
+            gotoPay = "read";
           });
         }
 
       }else{
         setState(() {
             lblReadBook = "Buy \$ " + widget.data.price.toString();
+            gotoPay = "gotopay";
         });
       }
 
     }
     return response;
+  }
+
+  showAlertDialog(BuildContext context) {
+
+    // set up the button
+    Widget okButton = TextButton(
+      child: Text("OK"),
+      onPressed: () { Navigator.of(context).pop(); },
+    );
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("Order Book"),
+      content: Text("Your order processing to confirm."),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
   }
 
 }
