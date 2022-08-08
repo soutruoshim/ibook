@@ -87,7 +87,7 @@ class PaymentState extends State<Payment> {
   }
   imageFromGallery() async {
     PickedFile? pickedFile = await ImagePicker()
-        .getImage(source: ImageSource.gallery, maxHeight: 200, maxWidth: 200);
+        .getImage(source: ImageSource.gallery, maxHeight: 800, maxWidth: 600);
     if (pickedFile != null) {
       setState(() {
         imageFile = File(pickedFile.path);
@@ -171,7 +171,7 @@ class PaymentState extends State<Payment> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          OutlineButton(
+          OutlinedButton(
             onPressed:  () {
               imageFromGallery();
             },
@@ -186,11 +186,9 @@ class PaymentState extends State<Payment> {
               fit: BoxFit.fill,
             ):Container(color: Colors.white,)
           ),
+
           SizedBox(
-            height: 20.0,
-          ),
-          SizedBox(
-            height: 20.0,
+            height: 10.0,
           ),
           Text(
             status,

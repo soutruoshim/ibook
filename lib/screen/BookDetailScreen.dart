@@ -84,8 +84,7 @@ class BookDetailScreenState extends State<BookDetailScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
-              alignment: Alignment.bottomLeft,
-              overflow: Overflow.visible,
+              clipBehavior: Clip.none, alignment: Alignment.bottomLeft,
               children: [
                 Container(
                   height: 200,
@@ -265,8 +264,8 @@ class BookDetailScreenState extends State<BookDetailScreen> {
 
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
-      title: Text("Order Book"),
-      content: Text("Your order processing to confirm."),
+      title: Text("Book"),
+      content: Text("Your donate processing to confirm."),
       actions: [
         okButton,
       ],

@@ -167,5 +167,5 @@ class LanguageEn extends BaseLanguage {
   String get lblIntroduction => "Introduction";
 
   @override
-  String get lblPayment => "Payment";
+  String get lblPayment => "Buy";
 }

@@ -71,7 +71,7 @@ class PaymentInstructionState extends State<PaymentInstruction> {
               onTap: () {
                 Payment(widget.book).launch(context);
               },
-              child: Text("Go Payment", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
+              child: Text("Go to payment", style: boldTextStyle(size: 18, color: Colors.white), textAlign: TextAlign.center),
             ).expand()
           ],
         ),
@@ -85,7 +85,7 @@ class PaymentInstructionState extends State<PaymentInstruction> {
         MediaQuery.of(context).padding.top;
 
     return SingleChildScrollView(
-      padding: EdgeInsets.fromLTRB(16.0, 0, 16.0, 0),
+      padding: EdgeInsets.fromLTRB(8.0, 0, 8.0, 0),
       child: ConstrainedBox(
         constraints: BoxConstraints(
           minHeight: minHeight,

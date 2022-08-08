@@ -99,7 +99,7 @@ class _LoginState extends State<Login> {
       children: <Widget>[
         FlatButton(
           padding: EdgeInsets.all(0.0),
-          child: Text("Forgot password?",
+          child: Text("If didn't have account",
               style: TextStyle(fontWeight: FontWeight.w300)),
           onPressed: () {
 //            Navigator.pushReplacementNamed(context, '/reset-password');

@@ -1,3 +1,4 @@
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -53,13 +54,13 @@ class HomeScreenState extends State<HomeScreen> {
   List<String> mCategoryId = [];
   List<AppSlider> mSliderList = [];
   List<Author> mAuthorList = [];
+  List<HomeSliderComponent> mHomeSliderComponent = [];
 
-  int? currentIndex = 0;
+  int currentIndex = 0;
   bool? isLoading = true;
   String? mErrorMsg = "";
 
-  PageController? pageController;
-
+  PageController? pageController = PageController(initialPage: 0) ;
   @override
   void initState() {
     super.initState();
@@ -86,6 +87,9 @@ class HomeScreenState extends State<HomeScreen> {
       mCategoryList = res.category!;
       mAuthorList = res.author!;
       isLoading = false;
+      mSliderList.forEach((element) {
+        mHomeSliderComponent.add(HomeSliderComponent(element));
+      });
       setState(() {});
     }).catchError((e) {
       isLoading = false;
@@ -110,6 +114,9 @@ class HomeScreenState extends State<HomeScreen> {
     UserPreferences().getUser().then((value) => {
         Provider.of<UserProvider>(context, listen: false).setUser(value)
     });
+
+
+
   }
 
   @override
@@ -142,6 +149,8 @@ class HomeScreenState extends State<HomeScreen> {
       left: 16,
     );
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -184,19 +193,47 @@ class HomeScreenState extends State<HomeScreen> {
                                 SizedBox(
                                   height: context.height() * 0.25,
                                   width: context.width(),
-                                  child: PageView.builder(
-                                    itemCount: mSliderList.length,
-                                    controller: pageController,
-                                    itemBuilder: (context, i) {
-                                      return HomeSliderComponent(mSliderList[i]);
+                                  child:
+                                  // PageView.builder(
+                                  //   itemCount: mSliderList.length,
+                                  //   controller: pageController,
+                                  //   itemBuilder: (context, i) {
+                                  //     return HomeSliderComponent(mSliderList[i]);
+                                  //   },
+                                  //   onPageChanged: (int i) {
+                                  //     currentIndex = i;
+                                  //     setState(() {});
+                                  //   },
+                                  // ),
+                                  ImageSlideshow(
+                                    /// Width of the [ImageSlideshow].
+                                    width: double.infinity,
+                                    /// Height of the [ImageSlideshow].
+                                    height: 200,
+                                    /// The page to show when first creating the [ImageSlideshow].
+                                    initialPage: 0,
+                                    /// The color to paint the indicator.
+                                    indicatorColor: Colors.blue,
+                                    /// The color to paint behind th indicator.
+                                    indicatorBackgroundColor: Colors.grey,
+                                    /// The widgets to display in the [ImageSlideshow].
+                                    /// Add the sample image file into the images folder
+                                    children: mHomeSliderComponent,
+
+                                    /// Called whenever the page in the center of the viewport changes.
+                                    onPageChanged: (value) {
+                                      print('Page changed: $value');
+                                      currentIndex = value;
+                                      setState(() { });
                                     },
-                                    onPageChanged: (int i) {
-                                      currentIndex = i;
-                                      setState(() {});
-                                    },
+                                    /// Auto scroll interval.
+                                    /// Do not auto scroll with null or 0.
+                                    autoPlayInterval: 4000,
+                                    /// Loops back to first slide.
+                                    isLoop: true,
                                   ),
                                 ),
-                                dotIndicator(mSliderList, currentIndex).paddingTop(8),
+                                //dotIndicator(mSliderList, currentIndex).paddingTop(8),
                               ],
                             ).paddingAll(16),
                           if (mLatestList.isNotEmpty)
